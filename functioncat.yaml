@@ -1,0 +1,22 @@
+opensystem: v1.0.0
+info:
+  name: elianiva cv 
+envs:
+  prod:
+    branch: master
+routes:
+  main_env: prod
+  main_app: frontend
+apps:
+  frontend:
+    type: web_frontend
+    envs:
+      prod:
+        build:
+          root_path: ./
+          command:  npm run build
+        provision:
+          root_path: dist
+          runtime:
+            type: nodejs18x
+     
