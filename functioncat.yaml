@@ -1,6 +1,6 @@
-opensystem: v1.0.0
+system: 1.0.0
 info:
-  name: elianiva cv 
+  name: elianiva cv
 envs:
   prod:
     branch: master
@@ -14,9 +14,7 @@ apps:
       prod:
         build:
           root_path: ./
-          command:  npm run build
+          script: npm run build
         provision:
           root_path: dist
-          runtime:
-            type: nodejs18x
-     
+          type: nodejs18x
